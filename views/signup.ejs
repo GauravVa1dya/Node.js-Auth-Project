@@ -1,0 +1,103 @@
+<section
+  style="
+    background: url('https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=996&t=st=1712596632~exp=1712597232~hmac=beb3084791fffc6613ae469ab32888714536f88804a5548f1e95fb8389b66594');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 1px;
+    text-align: center;
+    font-family: monospace;
+  "
+>
+  <h1 style="font-size: 25px">Sign Up</h1>
+  <% if (message) { %>
+  <p
+    style="
+      font-size: 16px;
+      color: white;
+      background-color: #4b9cd3;
+      width: fit-content;
+      padding: 6px;
+      margin: auto;
+      margin-bottom: 10px;
+    "
+  >
+    <%= message %>
+  </p>
+  <% } %>
+  <form action="/user/signup" method="post" style="text-align: center">
+    <input
+      type="text"
+      name="username"
+      placeholder="Username"
+      autocomplete="off"
+      size="40"
+      style="
+        font-size: 16pt;
+        font-family: monospace;
+        padding: 10px;
+        margin-top: 1px;
+      "
+      required
+    /><br />
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      autocomplete="off"
+      size="40"
+      style="
+        font-size: 16pt;
+        font-family: monospace;
+        padding: 10px;
+        margin-top: 10px;
+      "
+      required
+    /><br />
+    <input
+      type="password"
+      name="password"
+      placeholder="Password"
+      autocomplete="off"
+      size="40"
+      style="
+        font-size: 16pt;
+        font-family: monospace;
+        padding: 10px;
+        margin-top: 10px;
+      "
+      required
+    /><br />
+    <input
+      type="password"
+      name="cpassword"
+      placeholder="Confirm Password"
+      autocomplete="off"
+      size="40"
+      style="
+        font-size: 16pt;
+        font-family: monospace;
+        padding: 10px;
+        margin-top: 10px;
+      "
+      required
+    /><br /><br />
+    <div
+      style="margin: 0 auto; width: 300px; padding: 20px"
+      class="g-recaptcha"
+      data-sitekey="6LcmRHQpAAAAAKox1CmxwgV0Cbh03cU1MTc4si2g"
+    ></div>
+    <button
+      size="40"
+      style="font-size: 14pt; font-family: monospace; padding: 10px"
+      type="submit"
+    >
+      Sign Up
+    </button>
+  </form>
+  <br />
+  <!-- Sign-up Google Auth -->
+  <h3><a href="/auth/google">Sign Up with Google</a></h3>
+  <h3>Already have an account? <a href="/user/signin">Sign In</a></h3>
+  <!-- Link to sign-in page -->
+</section>

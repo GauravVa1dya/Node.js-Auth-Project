@@ -1,0 +1,79 @@
+<div
+  style="
+    background: url('https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=996&t=st=1712596632~exp=1712597232~hmac=beb3084791fffc6613ae469ab32888714536f88804a5548f1e95fb8389b66594');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 80vh;
+    width: 99vw;
+    padding-top: 20px;
+    font-family: monospace;
+  "
+>
+  <section style="text-align: center">
+    <h1 style="font-size: 25px">Sign In</h1>
+    <% if (message) { %>
+    <p
+      style="
+        font-size: 16px;
+        color: white;
+        background-color: #4b9cd3;
+        width: fit-content;
+        padding: 6px;
+        margin: auto;
+        margin-bottom: 10px;
+      "
+    >
+      <%= message %>
+    </p>
+    <% } %>
+    <form action="/user/signin" method="post">
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        size="40"
+        style="
+          font-size: 16pt;
+          font-family: monospace;
+          padding: 10px;
+          margin-top: 1px;
+        "
+        required
+      /><br /><br />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        size="40"
+        style="
+          font-size: 16pt;
+          font-family: monospace;
+          padding: 10px;
+          margin-top: 1px;
+        "
+        required
+      /><br /><br />
+      <div
+        style="margin: 0 auto; width: 300px; padding: 20px"
+        class="g-recaptcha"
+        data-sitekey="6LcmRHQpAAAAAKox1CmxwgV0Cbh03cU1MTc4si2g"
+      ></div>
+      <br />
+      <button
+        type="submit"
+        size="40"
+        style="font-size: 14pt; font-family: monospace; padding: 10px"
+      >
+        Sign In
+      </button>
+    </form>
+    <br />
+    <!-- Sign-in Google Auth -->
+    <h3><a href="/auth/google">Sign In with Google</a></h3>
+
+    <h3><a href="/user/forgot-password">Forgot Password?</a></h3>
+    <!-- Link to forgot password page -->
+    <h3>Don't have an account? <a href="/user/signup">Sign up</a></h3>
+  </section>
+</div>

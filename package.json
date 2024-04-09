@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "nodejs-auth",
+  "version": "1.0.0",
+  "description": "Authentication for login and signin using nodejs ",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gaurav Vaidya",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.0",
+    "google-auth-library": "^9.7.0",
+    "mongoose": "^8.3.0",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0",
+    "noty": "^3.2.0-beta-deprecated",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7"
+  }
+}
