@@ -92,16 +92,6 @@ export class UserPostController {
         .status(404)
         .render("signin", { message: "Please select captcha" });
     }
-    // ***********We can check the response from google by using fetch api************
-    // const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-    // const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`;
-    // const response = await fetch(url, {
-    //     method: 'POST',
-    //     headers: {
-    //         "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
-    //     }
-    // });
-
     try {
       const existingUser = await User.findOne({ email: email });
 
